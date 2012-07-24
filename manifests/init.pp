@@ -3,12 +3,12 @@ class perl {
   case $::osfamily {
 
     RedHat: {
-      include php::redhat
+      include perl::redhat
     }
 
     Solaris: {
       Package { provider => 'pkgutil' }
-      include php::solaris
+      include perl::solaris
     }
 
     default: { notice "Unsupported operatingsystem $::operatingsystem" }
