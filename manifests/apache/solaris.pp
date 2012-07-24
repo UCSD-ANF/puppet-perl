@@ -5,8 +5,9 @@ class perl::apache::solaris inherits perl::apache::common {
   }
 
   file { '/opt/csw/apache2/etc/mods-available/perl.load':
-    ensure => present,
-    source => "puppet:///modules/${module_name}/httpd/perl.load.solaris",
-    before => Apache::Module['perl'],
+    ensure  => present,
+    source  => "puppet:///modules/${module_name}/httpd/perl.load.solaris",
+    before  => Apache::Module['perl'],
+    require => Package['ap2_modperl'],
   }
 }
