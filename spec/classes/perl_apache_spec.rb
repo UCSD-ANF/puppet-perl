@@ -28,7 +28,7 @@ describe 'perl::apache', :type => 'class' do
     it {
       should contain_package('mod_perl')
       should contain_apache__module('perl')
-      should contain_file('/etc/httpd/conf.d/mods-available/perl.load')
+      should contain_file('/etc/httpd/mods-available/perl.load')
     }
   end
 
