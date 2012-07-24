@@ -4,7 +4,7 @@ class perl::apache::redhat inherits perl::apache::common {
     provider => 'pkgutil',
   }
 
-  file { '/opt/csw/apache2/etc/mods-available/perl.load':
+  file { '/etc/httpd/conf.d/mods-available/perl.load':
     ensure => present,
     source => "puppet:///modules/${module_name}/httpd/perl.load.redhat",
     before => Apache::Module['perl'],

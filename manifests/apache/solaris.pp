@@ -1,5 +1,5 @@
 class perl::apache::solaris inherits perl::apache::common {
-  package { 'ap2_modphp5':
+  package { 'ap2_modperl':
     ensure   => 'installed',
     provider => 'pkgutil',
   }
