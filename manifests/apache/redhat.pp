@@ -6,7 +6,7 @@ class perl::apache::redhat inherits perl::apache::common {
   file { '/etc/httpd/mods-available/perl.load':
     ensure  => present,
     source  => "puppet:///modules/${module_name}/httpd/perl.load.redhat",
-    before  => Apache::Module['perl'],
+    before  => Apache_anf::Module['perl'],
     require => Package['mod_perl'],
   }
 }

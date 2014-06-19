@@ -12,7 +12,7 @@ describe 'perl::apache', :type => 'class' do
 
     it {
       should contain_package('ap2_modperl')
-      should contain_apache__module('perl')
+      should contain_apache_anf__module('perl')
       should contain_file('/opt/csw/apache2/etc/mods-available/perl.load')
     }
   end
@@ -27,7 +27,7 @@ describe 'perl::apache', :type => 'class' do
 
     it {
       should contain_package('mod_perl')
-      should contain_apache__module('perl')
+      should contain_apache_anf__module('perl')
       should contain_file('/etc/httpd/mods-available/perl.load')
     }
   end
